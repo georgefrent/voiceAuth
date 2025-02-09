@@ -19,7 +19,7 @@ This project implements a voice-based authentication system that enhances tradit
 ## Machine Learning Model 🧠
 The voice verification algorithm is built using a Neural Network trained on the AudioMNIST dataset. It learns to compare two voice recordings and determine if they belong to the same speaker.
 
-1. Data Preparation & Pair Generation
+### 1. Data Preparation & Pair Generation
 - The dataset consists of multiple folders, each representing a different speaker.
 - The build_pairs() function creates:
   - Positive pairs (two recordings from the same speaker).
@@ -43,7 +43,7 @@ def build_pairs(num_pairs=5, num_speakers=60, data_path='AudioMNIST/data'):
     return [(pair, 1) for pair in positive_pairs] + [(pair, 0) for pair in negative_pairs]
 ```
 
-2. Feature Extraction (MFCCs)
+### 2. Feature Extraction (MFCCs)
 Each audio file is processed into Mel-Frequency Cepstral Coefficients (MFCCs), which capture important voice characteristics.
 ```
 def extract_mfcc(file_path, n_mfcc=39):
@@ -53,7 +53,7 @@ def extract_mfcc(file_path, n_mfcc=39):
     return mfccs
 ```
 
-3. Training the Neural Network
+### 3. Training the Neural Network
 - The model takes the absolute difference between two feature vectors.
 - It consists of three dense layers with ReLU activation.
 - It predicts 1 (same speaker) or 0 (different speakers).
@@ -71,7 +71,7 @@ nn.fit(tf.abs(x1_train - x2_train), y_train, epochs=100)
 nn.save('model.keras')
 ```
 
-4. Model Evaluation
+### 4. Model Evaluation
 After training, the model is tested on unseen data to check its accuracy.
 ```
 results = nn.evaluate(tf.abs(x1_test - x2_test), y_test)
