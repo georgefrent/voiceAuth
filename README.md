@@ -84,6 +84,7 @@ Python
 - TensorFlow/Keras – Machine Learning for speaker verification
 - Librosa – Audio feature extraction
 - FFmpeg – Audio format conversion
+- Uvicorn - An ASGI server that acts as a bridge between the FastAPI application (main.py) and the rest of the project. In case you want to run the project, you need to open Uvicorn server by running this command in the terminal: ``` uvicorn main:app ```
 ### Backend (Login & Registration System)
 PHP – Handles user accounts & database interactions<br>
 MySQL – Stores user credentials
