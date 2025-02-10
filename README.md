@@ -1,5 +1,5 @@
 # Voice Authentication System 🔐🎤
-This project implements a voice-based authentication system that enhances traditional password-based login with an additional layer of voice verification. It combines FastAPI, TensorFlow, and Librosa for processing and validating audio recordings. The frontend is built using HTML, CSS, and JavaScript, while PHP handles user authentication and database interactions. The user interface (UI) is fully implemented in Romanian because the project was made for a Romanian University class.
+This project implements a voice-based authentication system that enhances traditional password-based login with an additional layer of voice verification. It combines FastAPI, TensorFlow, and Librosa for processing and validating audio recordings. The frontend is built using HTML, CSS, and JavaScript, while PHP handles user authentication and database interactions.
 
 ## How It Works
 1. User Registration
